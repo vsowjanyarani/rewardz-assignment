@@ -1,0 +1,12 @@
+---
+- hosts: localhost
+  become: yes
+  tasks:
+    - name: Download WordPress
+      get_url: url=https://wordpress.org/latest.zip dest=/tmp/wordpress.zip
+      ignore_errors: yes
+      tags: wordpress
+    - name: Unzip WordPress
+      unarchive: src=/tmp/wordpress.zip dest=/tmp copy=no creates=/tmp/wordpress/wp-settings.php
+      ignore_errors: yes
+      tags: wordpress
