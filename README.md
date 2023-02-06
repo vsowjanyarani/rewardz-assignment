@@ -1,4 +1,4 @@
-# rewardz-assignment
+   # Rewardz-assignment
 
 
 # WordPress High Availability on AWS Cloud:
